@@ -3,7 +3,7 @@
 //  cheniu
 //
 //  Created by 黄成 on 15/9/9.
-//  Copyright (c) 2015年 souche. All rights reserved.
+//  Copyright (c) 2015年 huangcheng. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -14,7 +14,7 @@
 @optional
 
 - (void)filterBarSelectedAt:(NSInteger)index;
-- (void)filterBarCanSelectedAt:(NSInteger)index;
+- (void)filterBarCancellSelectedAt:(NSInteger)index;
 
 @end
 

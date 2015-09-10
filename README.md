@@ -1,5 +1,5 @@
 # CCFilter
-
+<!--
 [![CI Status](http://img.shields.io/travis/huangcheng/CCFilter.svg?style=flat)](https://travis-ci.org/huangcheng/CCFilter)
 [![Version](https://img.shields.io/cocoapods/v/CCFilter.svg?style=flat)](http://cocoapods.org/pods/CCFilter)
 [![License](https://img.shields.io/cocoapods/l/CCFilter.svg?style=flat)](http://cocoapods.org/pods/CCFilter)
@@ -27,3 +27,9 @@ huangcheng, huangcheng@souche.com
 ## License
 
 CCFilter is available under the MIT license. See the LICENSE file for more info.
+
+-->
+
+模仿手机淘宝的筛选，效果如下：
+
+![效果图]()

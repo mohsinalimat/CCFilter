@@ -1,0 +1,30 @@
+{
+  "name": "CCFilter",
+  "version": "0.1.0",
+  "summary": "A short description of CCFilter.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/CCFilter",
+  "license": "MIT",
+  "authors": {
+    "huangcheng": "huangcheng@souche.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/CCFilter.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "CCFilter": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "Masonry": [
+      "~> 0.6.1"
+    ]
+  }
+}

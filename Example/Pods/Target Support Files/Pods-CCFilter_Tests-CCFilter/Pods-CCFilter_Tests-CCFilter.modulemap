@@ -1,0 +1,6 @@
+framework module CCFilter {
+  umbrella header "Pods-CCFilter_Tests-CCFilter-umbrella.h"
+
+  export *
+  module * { export * }
+}

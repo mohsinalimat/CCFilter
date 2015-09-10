@@ -3,14 +3,13 @@
 //  cheniu
 //
 //  Created by 黄成 on 15/9/9.
-//  Copyright (c) 2015年 souche. All rights reserved.
+//  Copyright (c) 2015年 huangcheng. All rights reserved.
 //
 
 #import "CNNAucSelView.h"
-#import "CNNAucHeader.h"
 #import "CNNAucFliter.h"
 #import "CNNAucSelViewCell.h"
-
+#import <Masonry/Masonry.h>
 
 static NSString * const CellIdentifier = @"CNNAucSelViewCell";
 
@@ -90,12 +89,10 @@ static NSString * const CellIdentifier = @"CNNAucSelViewCell";
         self.tableViewSel.bounces = NO;
     }
     [UIView animateWithDuration:0.2 animations:^{
-//        self.frame = tbFrame;
         [self mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(@(tbFrame.size.height));
         }];
     } completion:^(BOOL finished) {
-//        self.frame = tbFrame;
         [self mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(@(tbFrame.size.height));
         }];
@@ -106,12 +103,10 @@ static NSString * const CellIdentifier = @"CNNAucSelViewCell";
     CGRect tbFrame = self.frame;
     tbFrame.size.height = 44;
     [UIView animateWithDuration:0.2 animations:^{
-//        self.frame = tbFrame;
         [self mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(@(tbFrame.size.height));
         }];
     } completion:^(BOOL finished) {
-//        self.frame = tbFrame;
         [self mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(@(tbFrame.size.height));
         }];
@@ -133,10 +128,11 @@ static NSString * const CellIdentifier = @"CNNAucSelViewCell";
     }
 }
 
-- (void)filterBarCanSelectedAt:(NSInteger)index{
+- (void)filterBarCancellSelectedAt:(NSInteger)index{
     [self hide];
     if ([self.selectedFilterBarDict objectForKey:@(index)]) {
         [self.selectedFilterBarDict removeObjectForKey:@(index)];
+        self.fliterBar.selectedFilterBarDict = self.selectedFilterBarDict;
         if ([self.delegate respondsToSelector:@selector(selView:didSelectedItem:)]) {
             [self.delegate selView:self didSelectedItem:self.selectedFilterBarDict];
         }

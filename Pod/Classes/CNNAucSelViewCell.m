@@ -3,14 +3,11 @@
 //  cheniu
 //
 //  Created by 黄成 on 15/9/10.
-//  Copyright (c) 2015年 souche. All rights reserved.
+//  Copyright (c) 2015年 huangcheng. All rights reserved.
 //
 
 #import "CNNAucSelViewCell.h"
-#import "CNNAucUtils.h"
-#import <CNNCore.h>
 #import <Masonry/Masonry.h>
-#import "CNNAucConstant.h"
 
 static CGFloat const kCellHeight = 44.0f;
 
@@ -32,7 +29,6 @@ static CGFloat const kCellHeight = 44.0f;
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-//        self.backgroundColor = [UIColor cnn_colorWithHexString:@"#F7F7F7"];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self addSubview:self.sepLine];
@@ -46,14 +42,14 @@ static CGFloat const kCellHeight = 44.0f;
     __weak typeof(self) weakSelf = self;
     [self.sepLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.left.right.equalTo(weakSelf);
-        make.height.equalTo(@(kAucSepLineHeight));
+        make.height.equalTo(@(0.5f));
     }];
 }
 
 - (UIView *)sepLine{
     if (_sepLine == nil) {
         _sepLine = [[UIView alloc]init];
-        _sepLine.backgroundColor = [UIColor cnn_colorWithHexString:kAucSepLineBackColor];
+        _sepLine.backgroundColor = [UIColor colorWithRed:208/255.0 green:208/255.0 blue:208/255.0 alpha:1.0];
     }
     return _sepLine;
 }

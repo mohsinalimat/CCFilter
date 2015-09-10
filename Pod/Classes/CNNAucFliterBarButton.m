@@ -3,11 +3,10 @@
 //  cheniu
 //
 //  Created by 黄成 on 15/9/9.
-//  Copyright (c) 2015年 souche. All rights reserved.
+//  Copyright (c) 2015年 huangcheng. All rights reserved.
 //
 
 #import "CNNAucFliterBarButton.h"
-#import "CNNAucUtils.h"
 
 #define UILightGrayColor [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1.0]
 
@@ -29,8 +28,8 @@
     _filterState = filterState;
     switch (filterState) {
         case CNNFilterBarStateNormal:{
-        [self settextNormal];}
-            break;
+            [self settextNormal];
+        }break;
         case CNNFilterBarStateSelected:{
             [self setShowSelected];
         }break;

@@ -3,8 +3,14 @@
 //  cheniu
 //
 //  Created by 黄成 on 15/9/9.
-//  Copyright (c) 2015年 souche. All rights reserved.
+//  Copyright (c) 2015年 huangcheng. All rights reserved.
 //
+
+/*
+ *负责弹出视图的内容
+ *负责回调业务层的参数字典
+ *负责获取筛选title的内容
+ */
 
 #import <UIKit/UIKit.h>
 @class CNNAucFliter;

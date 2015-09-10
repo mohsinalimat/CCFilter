@@ -1,0 +1,24 @@
+PODS:
+  - CCFilter (0.1.0):
+    - Masonry (~> 0.6.1)
+  - FBSnapshotTestCase (2.0.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.4)
+  - FBSnapshotTestCase/Core (2.0.4)
+  - FBSnapshotTestCase/SwiftSupport (2.0.4):
+    - FBSnapshotTestCase/Core
+  - Masonry (0.6.2)
+
+DEPENDENCIES:
+  - CCFilter (from `../`)
+  - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  CCFilter:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CCFilter: c772c57f65976727ee1b63e6d11137e022868d8e
+  FBSnapshotTestCase: d94cf34841c9e77390e29009e8e2713479d48753
+  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
+
+COCOAPODS: 0.37.2
