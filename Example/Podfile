@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'CCFilter_Example', :exclusive => true do
+  pod "CCFilter", :path => "../"
+end
+
+target 'CCFilter_Tests', :exclusive => true do
+  pod "CCFilter", :path => "../"
+
+  pod 'FBSnapshotTestCase'
+end
