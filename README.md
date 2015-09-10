@@ -32,4 +32,4 @@ CCFilter is available under the MIT license. See the LICENSE file for more info.
 
 模仿手机淘宝的筛选，效果如下：
 
-![效果图]()
+![效果图](https://raw.githubusercontent.com/Mikora/CCFilter/master/Screen.png)
