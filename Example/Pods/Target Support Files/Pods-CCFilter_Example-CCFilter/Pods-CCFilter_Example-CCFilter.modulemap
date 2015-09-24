@@ -1,4 +1,4 @@
-framework module CCFilter {
+framework moduleCNNAucFilter {
   umbrella header "Pods-CCFilter_Example-CCFilter-umbrella.h"
 
   export *

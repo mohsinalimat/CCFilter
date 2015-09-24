@@ -3,14 +3,15 @@
 //  cheniu
 //
 //  Created by 黄成 on 15/9/10.
-//  Copyright (c) 2015年 huangcheng. All rights reserved.
+//  Copyright (c) 2015年 souche. All rights reserved.
 //
 
 #import "CNNAucSelViewCell.h"
 #import <Masonry/Masonry.h>
 
+#define kAucSepLineBackColor [UIColor colorWithRed:209.0/255.0 green:209/255.0 blue:209/255.0 alpha:1.0]
 static CGFloat const kCellHeight = 44.0f;
-
+static CGFloat const kAucSepLineHeight = 0.5f;
 @interface CNNAucSelViewCell()
 
 @property (nonatomic,strong) UIView *sepLine;
@@ -42,14 +43,14 @@ static CGFloat const kCellHeight = 44.0f;
     __weak typeof(self) weakSelf = self;
     [self.sepLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.left.right.equalTo(weakSelf);
-        make.height.equalTo(@(0.5f));
+        make.height.equalTo(@(kAucSepLineHeight));
     }];
 }
 
 - (UIView *)sepLine{
     if (_sepLine == nil) {
         _sepLine = [[UIView alloc]init];
-        _sepLine.backgroundColor = [UIColor colorWithRed:208/255.0 green:208/255.0 blue:208/255.0 alpha:1.0];
+        _sepLine.backgroundColor = kAucSepLineBackColor;
     }
     return _sepLine;
 }

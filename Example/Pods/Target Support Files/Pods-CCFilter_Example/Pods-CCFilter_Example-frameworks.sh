@@ -50,8 +50,10 @@ code_sign() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'CCFilter.framework'
   install_framework 'Masonry.framework'
+  install_framework 'SDWebImage.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'CCFilter.framework'
   install_framework 'Masonry.framework'
+  install_framework 'SDWebImage.framework'
 fi

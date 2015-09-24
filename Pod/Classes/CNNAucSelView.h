@@ -3,18 +3,17 @@
 //  cheniu
 //
 //  Created by 黄成 on 15/9/9.
-//  Copyright (c) 2015年 huangcheng. All rights reserved.
+//  Copyright (c) 2015年 souche. All rights reserved.
 //
-
-/*
- *负责弹出视图的内容
- *负责回调业务层的参数字典
- *负责获取筛选title的内容
- */
 
 #import <UIKit/UIKit.h>
 @class CNNAucFliter;
 @class CNNAucSelView;
+
+typedef NS_ENUM(NSInteger, TableViewStyle){
+    TableViewStyleNone = 0,
+    TableViewStyleGroup = 1
+};
 
 @protocol CNNAucSelViewDelegate <NSObject>
 
@@ -30,7 +29,10 @@
 
 @interface CNNAucSelView : UIView
 
-@property (nonatomic,strong) NSMutableArray *dataArray;
+@property (nonatomic,assign) TableViewStyle style;
+
+@property (nonatomic,strong) NSMutableDictionary *dataDictionary;
+@property (nonatomic,strong) NSMutableArray *titleArray;
 
 @property (nonatomic,strong) NSMutableArray *dataOfFliterBar;
 
@@ -42,6 +44,8 @@
 
 @property (nonatomic,strong) UITableView *tableViewSel;
 @property (nonatomic,strong) CNNAucFliter *fliterBar;
+
+- (void)loadWithData:(NSMutableArray*)array withStyle:(TableViewStyle)style;
 
 - (void)show;
 - (void)hide;

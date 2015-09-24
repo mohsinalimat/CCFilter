@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B1D36C83DDB4CE3F49BFF1FE"
+               BlueprintIdentifier = "B0D3BFE5E10DC2C83B23F03D"
                BuildableName = "CCFilter.bundle"
                BlueprintName = "Pods-CCFilter_Tests-CCFilter-CCFilter"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -3,7 +3,7 @@
 //  cheniu
 //
 //  Created by 黄成 on 15/9/9.
-//  Copyright (c) 2015年 huangcheng. All rights reserved.
+//  Copyright (c) 2015年 souche. All rights reserved.
 //
 
 
@@ -14,8 +14,8 @@
  *－－选择状态 -->  高亮状态    ，关闭视图
  *－－非选择状态--> 高亮状态     ，把记录选择内容的字典针对这一个btn的值add，并且把弹出试图关闭，通知上层
  */
-
 #import "CNNAucFliter.h"
+#import "CNNAucFilterItemModel.h"
 
 #define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
 #define BUTTON_MARGIN   8.0f
@@ -56,11 +56,13 @@
 }
 - (void)reloadBtnState{
     [self drawLineWithIndex:0];
+    
     for (CNNAucFliterBarButton *btn in self.btnArray) {
         int flag = 0;
         for (NSNumber *number in [self.selectedFilterBarDict allKeys]) {
             if (btn.tag == [number integerValue] && [self.selectedFilterBarDict objectForKey:number]) {
-                [btn setTitle:[self.selectedFilterBarDict objectForKey:number] forState:UIControlStateNormal];
+                CNNAucFilterItemModel *model = [self.selectedFilterBarDict objectForKey:number];
+                [btn setTitle:model.name forState:UIControlStateNormal];
                 btn.filterState = CNNFilterBarStateHighNormal;
                 flag =1;
             }
@@ -76,15 +78,16 @@
         NSString *str = [_dataOfFliterBar objectAtIndex:btn.tag-1];
         [btn setTitle:str forState:UIControlStateNormal];
         btn.filterState = CNNFilterBarStateNormal;
-        if ([self.delegate respondsToSelector:@selector(filterBarCancellSelectedAt:)]) {
-            [self.delegate filterBarCancellSelectedAt:btn.tag];
+        
+        if ([self.delegate respondsToSelector:@selector(filterBarCanSelectedAt:)]) {
+            [self.delegate filterBarCanSelectedAt:btn.tag];
         }
     }else if(btn.filterState == CNNFilterBarStateSelected){
         btn.filterState = CNNFilterBarStateNormal;
         [self drawLineWithIndex:0];
         
-        if ([self.delegate respondsToSelector:@selector(filterBarCancellSelectedAt:)]) {
-            [self.delegate filterBarCancellSelectedAt:btn.tag];
+        if ([self.delegate respondsToSelector:@selector(filterBarCanSelectedAt:)]) {
+            [self.delegate filterBarCanSelectedAt:btn.tag];
         }
     }
     else{
@@ -145,7 +148,6 @@
     _selectedFilterBarDict = selectedFilterBarDict;
     [self reloadBtnState];
 }
-
 - (NSMutableArray *)btnArray{
     if (_btnArray == nil) {
         _btnArray = [[NSMutableArray alloc]init];
