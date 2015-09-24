@@ -3,7 +3,7 @@
 //  cheniu
 //
 //  Created by 黄成 on 15/9/10.
-//  Copyright (c) 2015年 souche. All rights reserved.
+//  Copyright (c) 2015年 cheng. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

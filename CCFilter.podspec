@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/CCFilter"
+  s.homepage         = "https://github.com/Mikora/CCFilter"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "huangcheng" => "huangcheng@souche.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/CCFilter.git", :tag => s.version.to_s }
+  s.author           = { "huangcheng" => "632300630@qq.com" }
+  s.source           = { :git => "https://github.com/Mikora/CCFilter.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
