@@ -21,7 +21,7 @@ huangcheng, 632300630@qq.com
 
 模仿手机淘宝的筛选，效果如下：
 
-![效果图{100*100}](https://raw.githubusercontent.com/Mikora/CCFilter/master/Screen.png)
+![效果图](http://7xpas5.com1.z0.glb.clouddn.com/Screen.png?imageView/1/w/187/h/333)
 
 
 ####使用
